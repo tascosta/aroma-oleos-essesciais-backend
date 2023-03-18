@@ -6,8 +6,7 @@ import { exec } from 'child_process';
 
 @Injectable()
 export class OleoService {
-
-  constructor(@InjectModel('Oleo') private readonly oleoModelo: Model<Oleo>) { }
+  constructor(@InjectModel('Oleo') private readonly oleoModelo: Model<Oleo>) {}
 
   async buscarTodos() {
     return await this.oleoModelo.find({}).exec();

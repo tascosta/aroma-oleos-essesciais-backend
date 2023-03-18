@@ -16,5 +16,4 @@ export const OleoSchema = new mongoose.Schema({
     type: Boolean,
     default: true 
   }
-
 });
