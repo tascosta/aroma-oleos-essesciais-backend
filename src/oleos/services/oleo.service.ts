@@ -3,6 +3,8 @@ import { Oleo } from '../oleo/oleo';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose'
 import { exec } from 'child_process';
+import { CreateOleoDTO } from '../DTO/create-oleo.dto';
+import { UpdateOleoDTO } from '../DTO/update-oleo.dto';
 
 @Injectable()
 export class OleoService {
@@ -16,13 +18,12 @@ export class OleoService {
     return await this.oleoModelo.findById(id).exec();
   }
 
-  async cadastrar(oleo: Oleo) {
+  async cadastrar(oleo: CreateOleoDTO) {
     return await this.oleoModelo.create(oleo);
   }
 
-  async atualizar(id: string, oleo: Oleo) {
-    await this.oleoModelo.updateOne({ _id: id }, oleo).exec();
-    return this.buscarPorId(id);
+  async atualizar(id: string, oleo: UpdateOleoDTO) {
+    return await this.oleoModelo.updateOne({ _id: id }, oleo).exec();
   }
 
   async excluir(id: string) {

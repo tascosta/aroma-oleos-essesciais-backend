@@ -1,6 +1,5 @@
-import { Document } from "mongoose";
 
-export class Oleo extends Document {
+export class Oleo {
   id: number;
   nome: string;
   descricao: string;
