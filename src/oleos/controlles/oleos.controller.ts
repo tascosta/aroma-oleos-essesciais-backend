@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { get } from 'http';
-import { OleoService } from './services/oleo.service';
-import { Oleo } from './oleo/oleo';
+import { OleoService } from '../services/oleo.service';
+import { Oleo } from '../oleo/oleo';
 
 @Controller('oleos')
 export class OleosController {
