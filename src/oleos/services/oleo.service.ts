@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { Oleo } from '../oleo/oleo';
 import { InjectModel } from '@nestjs/mongoose';

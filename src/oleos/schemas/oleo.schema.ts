@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as mongoose from 'mongoose';
 export const OleoSchema = new mongoose.Schema({
   nome: {

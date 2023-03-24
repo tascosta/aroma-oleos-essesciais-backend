@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { IsString } from 'class-validator';
 import { CreateOleoDTO } from './create-oleo.dto';
 
